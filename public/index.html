@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width , initial-scale = 1" >
+	<meta name="theme-color" content="#4285f4">
+	<style type="text/css">
+		.container {
+			display: grid;
+			width: 100%;
+			/*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 70px 100px 100px 100px 30px;
+			grid-gap: 4px;
+		}
+		.menu {
+			background-color: 	#98cbfb;
+			grid-column-start: 1;
+			grid-column-end: 5;
+		}
+		.sidebar{
+			background-color:  	#feefb9;
+			grid-row-start: 2;
+			grid-row-end: 5;
+			grid-column: 1/2;
+		}
+		.content{
+			background-color: #feaff9;
+			grid-column: 2/5;
+		}
+		.footer{
+			background-color: #ffe125;
+			grid-column: 1/5;
+			grid-row: 5/6;
+		}
+		img.profile{
+			width: 200px;
+			height: 200px;
+			max-width: 100%;
+		}
+		img.tombol{
+			padding: 1.5em inherit;
+		}
+	</style>
+	 <link rel="manifest" href="json/manifest.json">
+</head>
+<body>
+	<div class="container">
+		<div class="menu"><img src="images/dart-board.png"><b>Selamat Dataang</b></div>
+		<div class="sidebar"><img class="profile" src="images/prof.png"></div>
+		<div class="content"> <a href="https://habib17-mws.firebaseapp.com/project1/"><p>Content 1 Project Calculator</p></a>
+			<a href="https://habib17-mws.firebaseapp.com/project1/"><img class="tombol" src="images/Calculator.png"></a>
+		</div>
+		<div class="content">
+				<a href="https://habib17-mws.firebaseapp.com/project2/"><p>Content 2 Lokasi Istimewa Mapbox</p></a>
+			<a href="https://habib17-mws.firebaseapp.com/project2/"><img  class="tombol" src="images/Maps.png"></a>
+		</div>
+		<div class="content">Content 3</div>
+		<div class="footer" align="center">Muhamad Habib</div>
+	</div>
+	<noscript>Please Activate Javascript</noscript>
+<script>
+    if ('serviceWorker' in navigator) {
+        console.log("Will service worker register?");
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+    </script>
+</body>
+</html>

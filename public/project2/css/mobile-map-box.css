@@ -1,0 +1,32 @@
+/* menguasai panjang dan lebar layar*/
+html, body, #map{
+	height: 100%
+	width: 100vw;
+}
+/* menghilangkan default padding dan margin */
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	display: grid;
+	height: 100%;
+	grid-gap: 4px;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: 60% 40%;
+}
+/* 1/-1 berarti  tempati dari kolom pertama hingga kolom terakhir*/
+.peta{
+	grid-column: 1/-1;
+}
+
+.gambar{
+	background-color: #b44aff;
+	grid-column: 1/6;
+}
+
+.review{
+	background-color: #56ff93;
+	grid-column: 6/-1;
+}

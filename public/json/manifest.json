@@ -1,0 +1,30 @@
+{
+  "short_name": "MapBox",
+  "name": "MapBox",
+  "icons": [
+    {
+      "src":"images/prof.png",
+      "sizes": "617x627",
+      "type": "image/png"
+    },
+    {
+      "src": "images/Calculator.png",
+     "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/Maps.png",
+     "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/dart-board.png",
+     "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#000",
+  "theme_color": "#536878",
+  "display": "standalone"
+}
